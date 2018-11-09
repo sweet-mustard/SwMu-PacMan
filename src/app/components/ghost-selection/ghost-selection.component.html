@@ -1,4 +1,4 @@
 <div class="ghost-selection">
-  <button *ngFor="let ghost of ghosts" (click)="selectGhost(ghost)" [class]="ghost === selectedGhost? 'active':''">ghost {{ghost}}</button>
+  <button *ngFor="let ghost of ghosts" (click)="selectGhost(ghost.value)" [class]="ghost.value === selectedGhost? 'active':''"><img [src]="('./assets/' + ghost.image)"></button>
 </div>
 
