@@ -2,11 +2,21 @@
 // `ng build ---prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+import {IMqttServiceOptions} from 'ngx-mqtt';
+
 export const environment = {
   production: false
 };
 
+export const MQTT_SERVICE_OPTIONS: IMqttServiceOptions = {
+  hostname: 'http//whosa.be',
+    port: 8080,
+    path: ''
+}
+
+
 /*
+
  * In development mode, to ignore zone related error stack frames such as
  * `zone.run`, `zoneDelegate.invokeTask` for easier debugging, you can
  * import the following file, but please comment it out in production mode

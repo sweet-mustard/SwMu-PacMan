@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import {ConnectionService} from '../../connection.service';
 
 @Component({
   selector: 'app-main',
@@ -6,17 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main.component.css']
 })
 
-export class MainComponent implements OnInit {
+export class MainComponent {
+  currentGhost = 'B';
+  currentDirection = 1;
 
-  constructor() { }
+  constructor(private connectionService: ConnectionService) { }
 
-  ngOnInit() {
+  ghostSelected(event: string) {
+    this.currentGhost = event;
+      this.connectionService.sendCommand(this.currentGhost, this.currentDirection);
   }
-  ghostSelected(event: number) {
-    console.log(event);
-  }
-  directionChange(event: string) {
-    console.log(event);
+  changeDirection(event: number) {
+    this.currentDirection = event;
+      this.connectionService.sendCommand(this.currentGhost, this.currentDirection);
   }
 
 }

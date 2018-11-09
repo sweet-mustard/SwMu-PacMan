@@ -6,6 +6,8 @@ import { GhostSelectionComponent } from './components/ghost-selection/ghost-sele
 import { ControlsComponent } from './components/controls/controls.component';
 import { MainComponent } from './containers/main/main.component';
 import { HeaderComponent } from './components/header/header.component';
+import {MqttModule} from 'ngx-mqtt';
+import {MQTT_SERVICE_OPTIONS} from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,8 @@ import { HeaderComponent } from './components/header/header.component';
     HeaderComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+      MqttModule.forRoot(MQTT_SERVICE_OPTIONS)
   ],
   providers: [],
   bootstrap: [AppComponent]
