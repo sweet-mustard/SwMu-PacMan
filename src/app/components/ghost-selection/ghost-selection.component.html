@@ -1,0 +1,1 @@
+<button *ngFor="let ghost of ghosts" (click)="selectGhost(ghost)" [class]="ghost === selectedGhost? 'active':''">ghost {{ghost}}</button>
