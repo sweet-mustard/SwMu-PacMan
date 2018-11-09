@@ -1,4 +1,4 @@
-<div>
+<div class="ghost-selection">
   <button *ngFor="let ghost of ghosts" (click)="selectGhost(ghost)" [class]="ghost === selectedGhost? 'active':''">ghost {{ghost}}</button>
 </div>
 

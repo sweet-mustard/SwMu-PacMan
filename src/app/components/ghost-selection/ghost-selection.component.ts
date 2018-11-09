@@ -6,7 +6,7 @@ import {Component, EventEmitter, Output} from '@angular/core';
   styleUrls: ['./ghost-selection.component.css']
 })
 export class GhostSelectionComponent {
-  ghosts: string[] = ['B', 'P', 'I', 'C', '5', '6'];
+  ghosts: string[] = ['B', 'P', 'I', 'C', 'K', 'S'];
   selectedGhost = 'B';
   @Output() ghostSelected: EventEmitter<string> = new EventEmitter();
   constructor() { }

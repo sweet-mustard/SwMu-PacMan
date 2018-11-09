@@ -9,10 +9,10 @@ export const environment = {
 };
 
 export const MQTT_SERVICE_OPTIONS: IMqttServiceOptions = {
-  hostname: 'http//whosa.be',
+  hostname: '//whosa.be',
     port: 8080,
     path: ''
-}
+};
 
 
 /*
