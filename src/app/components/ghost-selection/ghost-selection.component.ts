@@ -6,7 +6,9 @@ import {Component, EventEmitter, Output} from '@angular/core';
   styleUrls: ['./ghost-selection.component.css']
 })
 export class GhostSelectionComponent {
-  ghosts = [{value: 'B', image: 'red.png'},
+  ghosts = [
+      {value: 'X', image: 'Pac-Man.png'},
+      {value: 'B', image: 'red.png'},
       {value: 'P', image: 'purple.png'},
       {value: 'I', image: 'orange.png'},
       {value: 'C', image: 'indigo.png'},
